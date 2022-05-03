@@ -2,12 +2,9 @@
   font-family: "arima madurai";
   display: block;
   margin: 0 auto;
-  max-width: 600px;
+  width: 500px;
   position: relative;
   border-radius: 50px;
-}
-.img {
-  max-width: 300px;
 }
 
 h1 {
