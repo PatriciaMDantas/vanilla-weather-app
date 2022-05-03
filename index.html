@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Baloo+2:wght@500&family=Comfortaa:wght@700&family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>
+        World Weather
+      </h1>
+      <div class="card-title" id="actualDate"> </div>
+      <p></p>
+    
+      <form id="search-form">
+      <label> City: </label>
+      <input class="city" type="search" placeholder="Type a city.." autofocus="on" autocomplete="off" id="cityInput"/>
+      <input class="btn btn-light w-20" type="submit" value="search" />
+      <input id=currentCity class="btn btn-light w-20" type="submit" value="current" />
+       </form>
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="src/images/lotrains.png"
+              class="img-fluid rounded-start"
+              alt="50px"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="clearfix">
+                      <div class="float-left">
+                        <h2><strong></strong><span class="temperature" id="temperature"></span
+                        ><span class="units">°C</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <ul class="description">
+                      <li>Humidity: <span id="humidity"></span>%</li>
+                      <li>Wind: <span id="wind"></span> km/h</li>
+                    </ul>
+                  </div>
+                </div></h2>
+              <h5 class="card-title" id="actualCity">Almada</h5>
+              <p id = description class="card-text">
+                Don't forget your umbrella, today is a beautiful day to sing in
+                the rain.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 30 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5>Next 3 days:</h5>
+      <div class="card-group">
+        <div class="card">
+          <img src="src/images/suncloud.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Tuesday</h5>
+            <h2> <strong>17º</strong>/11º</h2>
+            <small class="text-muted">Something is very shy today. Let's embrace a cloudy day.</small>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="src/images/sunlittlecloud.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Wednesday</h5>
+            <h2> <strong>18º</strong>/10º</h2>
+            <small class="text-muted">It looks like the sun wants to come out. Still don't forget your coat.</small>
+           
+          </div>
+        </div>
+        <div class="card">
+          <img src="src/images/sun.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Thuesday</h5>
+            <h2> <strong>19º</strong>/9º</h2>
+            <small class="text-muted">It's a beautiful sunny day. Get yourself into the beach.</small>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer">This page was built by Patricia MDantas</div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
