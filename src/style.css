@@ -1,3 +1,85 @@
+.container {
+  font-family: "arima madurai";
+  display: block;
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+  border-radius: 50px;
+}
+.img {
+  max-width: 300px;
+}
+
 h1 {
-  color: blueviolet;
+  text-shadow: 0px 0px 7px rgba(0, 118, 133, 0.5);
+  color: #007685;
+  text-align: center;
+  font-family: "arima madurai";
+  font-weight: bolder;
+  display: block;
+}
+
+h2 {
+  color: #00454e;
+  text-align: center;
+  font-size: 40px;
+  font-family: "arima madurai";
+}
+
+label {
+  text-shadow: 0px 0px 7px rgba(0, 118, 133, 0.5);
+  color: #007685;
+  font-family: "arima madurai";
+  font-weight: bolder;
+}
+
+.city {
+  border: 1px solid rgba(0, 118, 133, 0.9);
+  border-radius: 5px;
+  margin: 0px;
+  color: #007685;
+  font-family: "arima madurai";
+  font-weight: bolder;
+}
+.button {
+  border: 1px solid rgba(0, 118, 133, 0.9);
+  border-radius: 15px;
+  color: #007685;
+  font-family: "arima madurai";
+  font-weight: bolder;
+  border-width: 1px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.searchButton {
+  border: 1px solid rgba(0, 118, 133, 0.9);
+  border-radius: 15px;
+  margin: 0px;
+}
+
+.card {
+  box-shadow: 1px 2px 35px 15px rgba(0, 118, 133, 0.2);
+}
+.card-title {
+  font-family: "arima madurai";
+  font-weight: 900;
+  text-align: center;
+  color: rgba(0, 118, 133);
+}
+
+.card-text {
+  font-family: "arima madurai";
+  text-align: center;
+}
+
+.text-muted {
+  text-align: center;
+}
+
+.description {
+  color: #00454e;
+  text-align: left;
+  font-size: 15px;
+  font-family: "arima madurai";
 }
