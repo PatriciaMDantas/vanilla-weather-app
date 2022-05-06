@@ -25,12 +25,21 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
-  temperatureElement.innetHTML = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   informationElement.innerHTML = response.data.weather[0].information;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+}
+
+let searchButton = document.querySelector("#search-form");
+searchButton.addEventListener("submit", searchCity);
+function searchCity(event) {
+  event.preventDefault();
+  let actualCity = document.querySelector("#actualCity");
+  let cityInput = document.querySelector("#cityInput");
+  actualCity.innerHTML = cityInput.value;
 }
 
 let apiKey = "f727ec0dfcbdd24b05a503781a2f00e8";
