@@ -68,6 +68,7 @@ label {
 .card-text {
   font-family: "arima madurai";
   text-align: center;
+  text-transform: capitalize;
 }
 
 .text-muted {

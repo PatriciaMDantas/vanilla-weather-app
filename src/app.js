@@ -20,17 +20,24 @@ function formatDate(timestamp) {
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#Temperature");
-  let cityElement = document.querySelector("#City");
+  let cityElement = document.querySelector("#actualCity");
   let informationElement = document.querySelector("#information");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
-  informationElement.innerHTML = response.data.weather[0].information;
+  informationElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let searchButton = document.querySelector("#search-form");
@@ -43,7 +50,7 @@ function searchCity(event) {
 }
 
 let apiKey = "f727ec0dfcbdd24b05a503781a2f00e8";
-let City = "Lisbon";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${apiKey}&units=metric`;
+let actualCity = "Lisbon";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${actualCity}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
