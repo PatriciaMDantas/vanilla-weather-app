@@ -19,7 +19,7 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  let temperatureElement = document.querySelector("#Temperature");
+  let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#actualCity");
   let informationElement = document.querySelector("#information");
   let humidityElement = document.querySelector("#humidity");
@@ -70,7 +70,7 @@ function displayCelciusTemperature(event) {
   event.preventDefault();
   celsiustLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#Temperature");
+  let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = celsiusTemperature;
 }
 
