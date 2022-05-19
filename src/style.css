@@ -5,6 +5,8 @@
   width: 500px;
   position: relative;
   border-radius: 50px;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/033/370/original/fundo_II_app.jpg?1651582774");
+  background-size: 500px;
 }
 
 h1 {
@@ -19,7 +21,7 @@ h1 {
 h2 {
   color: #00454e;
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
   font-family: "arima madurai";
 }
 
@@ -60,10 +62,15 @@ label {
   box-shadow: 1px 2px 35px 15px rgba(0, 118, 133, 0.2);
 }
 .card-title {
+  background-color: rgba(254, 252, 255, 0);
   font-family: "arima madurai";
   font-weight: 900;
   text-align: center;
   color: rgba(0, 118, 133);
+}
+
+.box-info {
+  background: rgba(254, 252, 255, 0);
 }
 
 .card-text {
