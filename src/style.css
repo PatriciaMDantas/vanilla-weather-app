@@ -5,7 +5,7 @@
   width: 500px;
   position: relative;
   border-radius: 50px;
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/033/370/original/fundo_II_app.jpg?1651582774");
+
   background-size: 500px;
 }
 
@@ -64,7 +64,7 @@ label {
 .card-title {
   background-color: rgba(254, 252, 255, 0);
   font-family: "arima madurai";
-  font-weight: 900;
+  font-weight: 950;
   text-align: center;
   color: rgba(0, 118, 133);
 }
@@ -88,6 +88,9 @@ label {
   text-align: left;
   font-size: 15px;
   font-family: "arima madurai";
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 .units {
