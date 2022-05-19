@@ -18,6 +18,34 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="card-group">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-4">
+  <img src="http://openweathermap.org/img/wn/50d@2x.png" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">${day}</h5>
+    <h2>
+      
+      <strong class="weather-forecast-temperature-max">18°</strong>
+      <span class="weather-forecast-temperature-min">/10°</span>
+    </h2>
+    <small class="text-muted">
+      Something is very shy today. Let s embrace a cloudy day.
+    </small>
+  </div>
+</div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#actualCity");
@@ -35,11 +63,10 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  icon.setAttribute("src", `src/images/${response.data.weather[0].icon}.png`);
+  icon.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function search(actualCity) {
@@ -85,4 +112,6 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiustLink = document.querySelector("#celsius-link");
 celsiustLink.addEventListener("click", displayCelciusTemperature);
 
-search("New York");
+search("Lisboa");
+
+displayForecast();
