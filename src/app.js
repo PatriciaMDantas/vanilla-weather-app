@@ -48,10 +48,10 @@ function displayForecast(response) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-4">
-  <img src="http://openweathermap.org/img/wn/${
-    forecastDay.weather[0].icon
-  }@2x.png" class="card-img-top" alt="..." />
+        `<div class="col-4" id="icon">
+        <img src="./src/images/${
+          forecastDay.weather[0].icon
+        }.png" class="card-img-top" alt="..." />
   <div class="card-body">
     <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
     <h2>
@@ -98,8 +98,11 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  icon.setAttribute("src", `src/images/${response.data.weather[0].icon}.png`);
-  icon.setAttribute("alt", response.data.weather[0].description);
+  iconElement.setAttribute(
+    "src",
+    `src/images/${response.data.weather[0].icon}.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
 }

@@ -25,6 +25,12 @@ h2 {
   font-family: "arima madurai";
 }
 
+h4 {
+  color: #00454e;
+  font-size: 60px;
+  font-family: "arima madurai";
+}
+
 label {
   text-shadow: 0px 0px 7px rgba(0, 118, 133, 0.5);
   color: #007685;
@@ -41,6 +47,7 @@ label {
   font-weight: bolder;
   outline: none;
 }
+
 .button {
   border: 1px solid rgba(0, 118, 133, 0.9);
   border-radius: 15px;
